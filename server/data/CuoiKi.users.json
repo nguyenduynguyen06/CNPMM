@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "655b3712eea9cc9a8fbb7313"
+  },
+  "userName": "admin",
+  "phone_number": "082779742",
+  "passWord": "$argon2id$v=19$m=65536,t=3,p=4$WRHL2IwQcEjuzknEnS3IlA$M12ymrWeBZ63eZVx6F9NOWlbwbWEOjV2bG+m0Y/vIUk",
+  "role_id": 1,
+  "addRess": "Hồ Chí Minh ",
+  "__v": 0,
+  "balance": 300000
+}]

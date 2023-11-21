@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "655b4038ceb22878d6fedcde"
+  },
+  "name": "Hành động",
+  "picture": "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700479019/xkz30fqf3vlmxpwvgxya.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "655b422cceb22878d6fedd22"
+  },
+  "name": "Nhập vai trực tuyến",
+  "picture": "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700479521/qbp6gdhflzuzbcaaz3dw.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "655b4244ceb22878d6fedd25"
+  },
+  "name": "Nhập vai chiến lược",
+  "picture": "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700479545/oep3zzqnlvspnpsdbd7d.jpg",
+  "__v": 0
+}]

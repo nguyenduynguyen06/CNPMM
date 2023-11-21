@@ -4,7 +4,7 @@ const productSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
   },
   description: {
     type: String,
@@ -12,10 +12,10 @@ const productSchema = new mongoose.Schema({
   },
   category: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Category', 
+    ref: 'Category',
   },
   platform: {
-    type: String,  
+    type: String,
     required: true,
   },
   price: {
@@ -25,10 +25,16 @@ const productSchema = new mongoose.Schema({
   pictures: [
     {
       type: String
-    }
+    },
+  ],
+  codes: [
+    {
+      type: String,
+      unique: true,
+    },
   ],
 });
 
-const Product  = mongoose.model('Product ', productSchema);  
+const Product = mongoose.model('Product', productSchema);
 
-module.exports = Product ;
+module.exports = Product;

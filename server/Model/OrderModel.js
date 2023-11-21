@@ -9,7 +9,12 @@ const cartItemSchema  = new mongoose.Schema({
     type: Number,
     required: true,
     default: 1,
+  },
+  codes:[
+  {
+    type: String
   }
+  ]
 });
 const orderSchema = new mongoose.Schema({
   user: {
@@ -23,10 +28,6 @@ const orderSchema = new mongoose.Schema({
     required: true,
   },
   userPhone: {
-    type: String,
-    required: true,
-  },
-  address: {
     type: String,
     required: true,
   },

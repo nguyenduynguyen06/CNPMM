@@ -52,7 +52,7 @@ const tailFormItemLayout = {
 const NewProduct = () => {
   const user = useSelector((state) => state.user)
   const [form] = Form.useForm();
-  const [addForm] = Form.useForm();
+  const [addform] = Form.useForm();
   const [categories, setCategories] = useState([])
   const [productData, setProductData] = useState([])
   const [currentProductId, setCurrentProductId] = useState(null);
@@ -83,8 +83,38 @@ const NewProduct = () => {
           .filter((file) => file.status === 'done')
           .map((file) => file.response.imageUrls);
         const allImageUrls = [].concat(...uploadedFilePaths);
-        console.log('')
         form.setFieldsValue({ pictures: allImageUrls });
+      } else if (info.file.status === 'error') {
+        message.error(`${info.file.name} file upload failed.`);
+      }
+    }
+  };
+  const propss = {
+    name: 'images',
+    action: `${process.env.REACT_APP_API_URL}/uploads`,
+    headers: {
+      authorization: 'authorization-text',
+    },
+    accept: '.jpg, .jpeg, .png',
+    multiple: true,
+    beforeUpload: (file) => {
+      const isJpgOrPng = file.type === 'image/jpeg' || file.type === 'image/png';
+      if (!isJpgOrPng) {
+        message.error('Chỉ cho phép tải lên tệp JPG hoặc PNG!');
+      }
+      return isJpgOrPng;
+    },
+    onChange(info) {
+      if (info.file.status !== 'uploading') {
+        console.log(info.file, info.fileList);
+      }
+      if (info.file.status === 'done') {
+        message.success(`${info.file.name} file uploaded successfully`);
+        const uploadedFilePaths = info.fileList
+          .filter((file) => file.status === 'done')
+          .map((file) => file.response.imageUrls);
+        const allImageUrls = [].concat(...uploadedFilePaths);
+        addform.setFieldsValue({ pictures: allImageUrls });
       } else if (info.file.status === 'error') {
         message.error(`${info.file.name} file upload failed.`);
       }
@@ -100,7 +130,7 @@ const NewProduct = () => {
       });
   }, []);
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_URL}/product/getAll`)
+    axios.get(`${process.env.REACT_APP_API_URL}/product/getAll`,{headers})
       .then((response) => {
         setProductData(response.data.data);
       })
@@ -114,16 +144,25 @@ const NewProduct = () => {
   const onFinish = async (values) => {
     try {
       await axios.post(
-        `${process.env.REACT_APP_API_URL}/product/addProduct`, {
-        ...values,
-      }, { headers }
+        `${process.env.REACT_APP_API_URL}/product/addProduct`, 
+        {
+          ...values,
+          codes: codes,
+        }, 
+        { headers }
       );
-      message.success('Thêm sản phẩm thành công')
-      form.resetFields();
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/product/getAll`, { headers });
+      setProductData(response.data.data);
+  
+      message.success('Thêm sản phẩm thành công');
+      addform.resetFields();
+      setCodes([]);
     } catch (error) {
-      message.error('Hãy thêm biến thể cho danh mục vừa thêm')
+      message.error(error.message || 'Có lỗi xảy ra khi thêm sản phẩm');
     }
   };
+  
+  
   const handleSaveEdit = (id, values) => {
     const productId = id;
     axios.put(`${process.env.REACT_APP_API_URL}/product/editProduct/${productId}`, values, { headers })
@@ -145,10 +184,20 @@ const NewProduct = () => {
       });
   };
   
-    
+  const [codes, setCodes] = useState([]);
+
+  const handleAddCode = () => {
+    setCodes([...codes, '']);
+  };
+  
+  const handleCodeChange = (index, value) => {
+    const newCodes = [...codes];
+    newCodes[index] = value;
+    setCodes(newCodes);
+  };  
   const handleDeleteProduct = (productId) => {
     axios
-      .delete(`${process.env.REACT_APP_API_URL}/product/delete/${productId}`,{ headers })
+      .delete(`${process.env.REACT_APP_API_URL}/product/deleteProduct/${productId}`,{ headers })
       .then((response) => {
         const updatedProducts = productData.filter(product => product._id !== productId);
         message.success('Xoá sản phẩm thành công')
@@ -285,7 +334,7 @@ const NewProduct = () => {
     <br></br>
     <Form
       {...formItemLayout}
-      form={addForm}
+      form={addform}
       onFinish={onFinish}
       style={{
         maxWidth: 600,
@@ -356,7 +405,7 @@ const NewProduct = () => {
           },
         ]}
       >
-        <Upload {...props}>
+        <Upload {...propss}>
           <Button icon={<UploadOutlined />}>Ảnh</Button>
         </Upload>
       </Form.Item>
@@ -374,6 +423,20 @@ const NewProduct = () => {
           theme="snow"
           placeholder="Nhập mô tả ở đây..."
         />
+      </Form.Item>
+      <Form.Item label="Codes">
+        <Space direction="vertical" style={{ width: '100%' }}>
+          {codes.map((code, index) => (
+            <Input
+              key={index}
+              value={code}
+              onChange={(e) => handleCodeChange(index, e.target.value)}
+            />
+          ))}
+          <Button type="dashed" onClick={handleAddCode}>
+            Thêm Code
+          </Button>
+        </Space>
       </Form.Item>
       <Form.Item {...tailFormItemLayout}>
         <Button type="primary" htmlType="submit">

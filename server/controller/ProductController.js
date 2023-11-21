@@ -2,11 +2,15 @@ const Product = require('../Model/ProductModel');
 const Category = require('../Model/CategoryModel');
 const addProduct = async (req, res) => {
   try {
-    const { name, description, categoryName, platform, price, pictures } = req.body;
+    const { name, description, categoryName, platform, price, pictures, codes } = req.body;
 
-    const existingCategory = await Category.findOne({name: categoryName});
+    const existingCategory = await Category.findOne({ name: categoryName });
     if (!existingCategory) {
       return res.status(404).json({ success: false, error: 'Category không tồn tại' });
+    }
+    const isCodeUnique = await Product.findOne({ codes });
+    if (isCodeUnique) {
+      return res.status(400).json({ success: false, error: 'Mã sản phẩm đã tồn tại' });
     }
     const newGame = new Product({
       name,
@@ -15,7 +19,9 @@ const addProduct = async (req, res) => {
       platform,
       price,
       pictures,
+      codes,
     });
+
     const savedGame = await newGame.save();
     res.status(201).json({ success: true, data: savedGame });
   } catch (error) {
@@ -23,19 +29,40 @@ const addProduct = async (req, res) => {
   }
 };
 
+const addCodes = async (req, res) => {
+  try {
+    const { codes } = req.body;
+    const { productId } = req.params;
+    const product = await Product.findById(productId);
+    if (!product) {
+      return res.status(404).json({ success: false, error: 'Product not found' });
+    }
+    const isCodeUnique = await Product.findOne({ codes });
+    if (isCodeUnique) {
+      return res.status(400).json({ success: false, error: 'Mã sản phẩm đã tồn tại' });
+    }
+    product.codes.push(codes);
+    await product.save();
+    res.status(200).json({ success: true, data: product });
+  } catch (error) {
+    console.error('Error when adding codes to product:', error);
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
 
 
 
 const getProductsByCategory = async (req, res) => {
   try {
     const categoryId = req.params.categoryId;
-    const products = await Product.find({ category: categoryId }).lean().populate('category');
+    const products = await Product.find({ category: categoryId }).select('-codes').populate('category');
     res.status(200).json({ success: true, data: products });
   } catch (error) {
     console.error('Lỗi:', error);
     res.status(500).json({ success: false, error: 'Lỗi Server' });
   }
 };
+
 const getProductsAll = async (req, res) => {
   try {
     const products = await Product.find().lean().populate('category');
@@ -67,6 +94,9 @@ const editProduct = async (req, res) => {
     }
     if (data.pictures) {
       updateData.pictures = data.pictures;
+    }
+    if (data.codes) {
+      updateData.codes = data.codes;
     }
     const updatedProduct = await Product.findByIdAndUpdate(productId, updateData, { new: true })
       .populate('category')
@@ -102,7 +132,7 @@ const searchProducts = async (req, res) => {
     const regex = new RegExp(keyword, 'i');
     const products = await Product.find({
       name: { $regex: regex }
-    }).populate('category').lean();
+    }).select('-codes').populate('category').lean();
     res.status(200).json({ success: true, data: products });
   } catch (error) {
     console.error('Lỗi:', error);
@@ -112,12 +142,11 @@ const searchProducts = async (req, res) => {
 const detailsProduct = async (req, res) => {
   try {
     const { name } = req.params;
-    const products = await Product.findOne({ name })
-      .populate('category').lean();
-    if (!products) {
+    const product = await Product.findOne({ name }).select('-codes').populate('category').lean();
+    if (!product) {
       return res.status(404).json({ success: false, error: 'Sản phẩm không tồn tại' });
     }
-    res.status(200).json({ success: true, data: products });
+    res.status(200).json({ success: true, data: product });
   } catch (error) {
     console.error('Lỗi:', error);
     res.status(500).json({ success: false, error: 'Lỗi Server' });
@@ -126,4 +155,5 @@ const detailsProduct = async (req, res) => {
 
 
 
-module.exports = { addProduct, getProductsByCategory, editProduct, deleteProduct, searchProducts, detailsProduct,getProductsAll };
+
+module.exports = { addProduct, getProductsByCategory, editProduct, deleteProduct, searchProducts, detailsProduct,getProductsAll,addCodes };

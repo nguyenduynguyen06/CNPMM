@@ -136,8 +136,8 @@ const changePassword = async (req, res) => {
   const depositBalance = async (req, res) => {
     try {
       const userId = req.params.userId;
-      const { amount } = req.body;
-      
+      let { amount } = req.body;
+  
       if (!userId) {
         return res.status(400).json({ msg: 'Không tìm thấy ID người dùng' });
       }
@@ -147,6 +147,12 @@ const changePassword = async (req, res) => {
       if (!user) {
         return res.status(404).json({ msg: 'Người dùng không tồn tại' });
       }
+      amount = parseFloat(amount);
+  
+      if (isNaN(amount)) {
+        return res.status(400).json({ msg: 'Số tiền không hợp lệ' });
+      }
+  
       user.balance += amount;
       await user.save();
       return res.status(200).json({ msg: 'Nạp tiền thành công', newBalance: user.balance });
@@ -155,6 +161,7 @@ const changePassword = async (req, res) => {
       return res.status(500).json({ msg: 'Lỗi Server' });
     }
   };
+  
   const getAllUsers = async (req, res) => {
     try {
       const users = await User.find();

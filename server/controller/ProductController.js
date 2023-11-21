@@ -34,21 +34,32 @@ const addCodes = async (req, res) => {
     const { codes } = req.body;
     const { productId } = req.params;
     const product = await Product.findById(productId);
+    const allProducts = await Product.find();
+
     if (!product) {
       return res.status(404).json({ success: false, error: 'Product not found' });
     }
-    const isCodeUnique = await Product.findOne({ codes });
-    if (isCodeUnique) {
-      return res.status(400).json({ success: false, error: 'Mã sản phẩm đã tồn tại' });
+
+    for (const code of codes) {
+      const isCodeUnique = allProducts.some((p) => p.codes.includes(code));
+
+      if (isCodeUnique) {
+        return res.status(400).json({ success: false, error: `Mã sản phẩm ${code} đã tồn tại trong ít nhất một sản phẩm` });
+      }
+
+      product.codes.push(code);
     }
-    product.codes.push(codes);
+
     await product.save();
+
     res.status(200).json({ success: true, data: product });
   } catch (error) {
     console.error('Error when adding codes to product:', error);
     res.status(500).json({ success: false, error: error.message });
   }
 };
+
+
 
 
 

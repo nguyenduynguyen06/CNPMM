@@ -12,7 +12,7 @@ const {
 } = require('../controller/ProductController');
 const { authMiddleware } = require('../middleware/authMiddleware');
 router.post('/addProduct', authMiddleware,addProduct);
-router.post('/addCodes/:productId',addCodes);
+router.post('/addCodes/:productId',authMiddleware,addCodes);
 router.get('/getIdByCategory/:categoryId', getProductsByCategory);
 router.get('/getAll/', authMiddleware,getProductsAll);
 router.put('/editProduct/:id',authMiddleware, editProduct);

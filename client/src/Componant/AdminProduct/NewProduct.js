@@ -58,6 +58,7 @@ const NewProduct = () => {
   const [currentProductId, setCurrentProductId] = useState(null);
   const [isUpdate, setUpdate] = useState(false);
   const [isDeleteModalVisible, setDeleteModalVisible] = useState(false);
+  const [addCodes, setAddCodes] = useState(false);
   const props = {
     name: 'images',
     action: `${process.env.REACT_APP_API_URL}/uploads`,
@@ -207,6 +208,22 @@ const NewProduct = () => {
         console.error('Lỗi khi xóa sản phẩm: ', error);
       });
   };
+  const handleAddCodeProduct = async (productId,values) => {
+    try {
+      await axios.post(`${process.env.REACT_APP_API_URL}/product/addCodes/${productId}`,{
+        values,
+        codes: codes,
+      },  { headers });
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/product/getAll`, { headers });
+      setProductData(response.data.data);
+      message.success('thành công')
+      form.resetFields()
+      setCodes([]);
+    } catch (error) {
+      console.error('Đã bị trùng mã sản phẩm: ', error);
+    }
+  };
+  
   const columns = [
     {
       title: 'Tên game',
@@ -256,6 +273,49 @@ const NewProduct = () => {
             }} /> 
             </a>
           <a onClick={() => {setDeleteModalVisible(true); setCurrentProductId(record);}}> <DeleteOutlined /></a>
+          <a onClick={() => {setAddCodes(true); setCurrentProductId(record);}}> <PlusOutlined /></a>
+          <Modal
+                  title="Thêm code"
+                  visible={addCodes}
+                  onOk={() => {
+                    form
+                      .validateFields()
+                      .then((values) => {
+                      handleAddCodeProduct( currentProductId, values);
+                        setAddCodes(false);
+                      })
+                      .catch((errorInfo) => {
+                        console.error('Validation failed:', errorInfo);
+                      });
+                  }}
+                  onCancel={() => {
+                    setAddCodes(false);
+                  }}
+                >
+                  <Form
+                    {...formItemLayout}
+                    form={form}
+                    style={{
+                      maxWidth: 600,
+                    }}
+                    scrollToFirstError
+                  >
+                    <Form.Item label="Codes">
+                  <Space direction="vertical" style={{ width: '100%' }}>
+                    {codes.map((code, index) => (
+                      <Input
+                        key={index}
+                        value={code}
+                        onChange={(e) => handleCodeChange(index, e.target.value)}
+                      />
+                    ))}
+                    <Button type="dashed" onClick={handleAddCode}>
+                      Thêm Code
+                    </Button>
+                  </Space>
+                </Form.Item>
+                  </Form>
+                </Modal>  
                   <Modal
           title="Xác nhận xoá sản phẩm"
           visible={isDeleteModalVisible}

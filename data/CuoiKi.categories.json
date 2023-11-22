@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "655b4038ceb22878d6fedcde"
+  },
+  "name": "Hành động",
+  "picture": "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700479019/xkz30fqf3vlmxpwvgxya.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "655cfe6a54191fc073e222ce"
+  },
+  "name": "Kinh Dị",
+  "picture": "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700593246/hach3c8c79hlbg0qxvdm.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "655cfebf54191fc073e222d1"
+  },
+  "name": "Nhập vai phiêu lưu ",
+  "picture": "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700593331/a57u3ygu4bsz4mqhwabf.jpg",
+  "__v": 0
+}]

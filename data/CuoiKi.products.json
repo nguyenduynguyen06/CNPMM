@@ -1,0 +1,148 @@
+[{
+  "_id": {
+    "$oid": "655cfc1254191fc073e22259"
+  },
+  "name": "Half-Life: Alyx",
+  "description": "<p>Half-Life: Alyx chính là sự trở về của Valve với sê-ri Half-Life qua phương diện thực tế ảo. Đó là câu truyện về cuộc chiến không tưởng giữa chủng tộc ngoài hành tinh bạo tàn mang tên Combine, mốc thời gian nằm giữa sự kiện Half-Life và Half-Life 2.</p><p><br></p><p>Nhập vai Alyx Vance, bạn là cơ hội duy nhất của nhân loại trong cuộc chiến sinh tồn. Kể từ sau biến cố Black Mesa, quyền kiểm soát hành tinh của Combine ngày một tăng vì chúng nhồi nhét phần dân số còn lại trong các thành phố. Trong số đó còn sót lại một vài nhà khoa học vĩ đại nhất Trái Đất: bạn và ba của bạn, Tiến sĩ Eli Vance.</p><p><br></p><p>Là nhà sáng lập của lực lượng kháng chiến còn non trẻ, bạn đã luôn hoạt động khoa học trong bí mật—tiến hành các nghiên cứu then chốt và thiết kế những đạo cụ quý báu dành cho số ít người đủ can đảm để chống lại Combine.</p><p><br></p><p>Mỗi ngày trôi qua, bạn lại hiểu thêm về quân thù, nhờ đó tiến xa thêm trong việc tìm ra yếu điểm của chúng.</p><p><br></p>",
+  "category": {
+    "$oid": "655b4038ceb22878d6fedcde"
+  },
+  "platform": "PC,Console",
+  "price": 239500,
+  "pictures": [
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700592624/ijs435hnlzjr3btckpnh.jpg",
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700592633/n9ubmxouuucrqeqtvjmy.jpg",
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700592633/yibcjnefnbtcmuz9teub.jpg",
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700592633/vg36owrufez2k0fa3qbw.jpg",
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700592633/qhoecf4aydqvtotfrryp.jpg"
+  ],
+  "codes": [
+    "RZHNnBxN",
+    "iwIVmWHM",
+    "3D8lQxq9",
+    "ogmvBt0M",
+    "hqYQIURW",
+    "JhNMItRs",
+    "UiOc8AGq"
+  ],
+  "__v": 14
+},
+{
+  "_id": {
+    "$oid": "655cfd8d54191fc073e222ae"
+  },
+  "name": "Sekiro™: Shadows Die Twice - GOTY Edition",
+  "description": "<p>&nbsp;Phản ánh và Găng tay Sức mạnh - chế độ thử thách trùm mới</p><p>- Tàn tích - để lại tin nhắn và bản ghi lại hành động của bạn mà người chơi khác có thể xem và xếp hạng</p><p>- 3 giao diện mỹ phẩm có thể mở khóa</p><p><br></p><p>Trò chơi của Năm - The Game Awards 2019</p><p>Trò chơi hành động hay nhất năm 2019 - IGN</p><p>Hơn 50 giải thưởng và đề cử</p><p><br></p><p>Hãy vạch ra con đường báo thù thông minh của riêng bạn trong cuộc phiêu lưu được giới phê bình đánh giá cao từ nhà phát triển FromSoftware, người tạo ra loạt phim Dark Souls.</p><p><br></p><p>Trong Sekiro™: Shadows Die Twice, bạn là 'con sói một tay', một chiến binh bị thất sủng và dị dạng được giải cứu khỏi bờ vực của cái chết. Bị ràng buộc để bảo vệ một lãnh chúa trẻ là hậu duệ của dòng máu cổ xưa, bạn trở thành mục tiêu của nhiều kẻ thù hung ác, bao gồm cả tộc Ashina nguy hiểm. Khi lãnh chúa trẻ bị bắt, không gì có thể ngăn cản bạn thực hiện nhiệm vụ nguy hiểm để lấy lại danh dự, thậm chí cả cái chết.</p><p><br></p><p>Khám phá Sengoku Japan vào cuối những năm 1500, một thời kỳ tàn khốc của xung đột sinh tử liên miên, khi bạn đối mặt với những kẻ thù lớn hơn cả sự sống trong một thế giới đen tối và vặn vẹo. Giải phóng kho vũ khí gồm các công cụ giả chết người và khả năng ninja mạnh mẽ trong khi bạn kết hợp khả năng tàng hình, di chuyển theo chiều dọc và chiến đấu trực diện từ nội tạng trong một cuộc đối đầu đẫm máu.</p><p><br></p><p>Trả thù. Khôi phục danh dự của bạn. Giết một cách khéo léo.</p>",
+  "category": {
+    "$oid": "655b4038ceb22878d6fedcde"
+  },
+  "platform": "PC,Console",
+  "price": 645000,
+  "pictures": [
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700592989/wss5c5nqftmfnbhxzyta.jpg",
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700592998/ev7cvysuu9vtllsaozeh.jpg",
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700592998/cg1bdhcwtjqmojfly8o0.jpg",
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700592998/i3sblysuu3ojbectn8wv.jpg"
+  ],
+  "codes": [
+    "Nlua6l9J",
+    "k9RTgj80"
+  ],
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "655cff7b54191fc073e222e5"
+  },
+  "name": "Dying Light 2 Stay Human",
+  "description": "<p>Đã 20 năm trôi qua kể từ những sự kiện trong trò chơi gốc. Virus đã chiến thắng và nhân loại đang dần chết đi. Bạn vào vai Aiden Caldwell, một Người hành hương lang thang, người giao hàng, mang tin tức và kết nối một số khu định cư còn sót lại của những người sống sót ở những vùng đất cằn cỗi bị virus zombie tàn phá. Tuy nhiên, mục tiêu thực sự của bạn là tìm lại em gái Mia, người mà bạn đã bỏ lại khi còn nhỏ để thoát khỏi những thí nghiệm tra tấn của Tiến sĩ Waltz. Bị ám ảnh bởi quá khứ, cuối cùng bạn đưa ra quyết định đối đầu với nó khi biết rằng Mia có thể vẫn còn sống ở Villedor - thành phố cuối cùng còn tồn tại trên Trái đất.</p><p><br></p><p>Bạn nhanh chóng thấy mình đang ở trong một khu định cư bị giằng xé bởi xung đột. Bạn sẽ cần tham gia vào những trận chiến sáng tạo và đẫm máu, vì vậy hãy trau dồi kỹ năng của mình để đánh bại lũ zombie và kết đồng minh. Đi lang thang trong thành phố, chạy tự do qua các tòa nhà và mái nhà của Villedor để tìm kiếm chiến lợi phẩm ở những khu vực hẻo lánh và cảnh giác với màn đêm. Với mỗi hoàng hôn, lũ quái vật chiếm quyền kiểm soát đường phố.</p>",
+  "category": {
+    "$oid": "655cfe6a54191fc073e222ce"
+  },
+  "platform": "PC,Console",
+  "price": 495000,
+  "pictures": [
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700593491/zlcevd5lw9t2cfrxby9w.jpg",
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700593503/pfhyklzqq6ntnymhur6v.jpg",
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700593503/gdzowypjwmtqgrgvc2pv.jpg",
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700593504/piq0russe9vwfynzkwih.jpg",
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700593504/pwxsotcjgb1cgumpqdq1.jpg"
+  ],
+  "codes": [
+    "5Tskuz0H",
+    "NHfNFUen"
+  ],
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "655cfff954191fc073e222e9"
+  },
+  "name": "Dying Light",
+  "description": "<p>Từ những người tạo ra các tựa game đình đám Dead Island và Call of Juarez. Giành được hơn 50 giải thưởng và đề cử trong ngành. Trò chơi có cách tiếp cận lối chơi không khoan nhượng đã đặt ra các tiêu chuẩn mới cho trò chơi zombie góc nhìn thứ nhất. Vẫn được hỗ trợ với nội dung mới và các sự kiện cộng đồng miễn phí nhiều năm sau khi phát hành.</p><p>Sống sót trong một thành phố bị virus zombie bao vây! Khám phá sự lựa chọn khó khăn mà bạn sẽ phải thực hiện trong nhiệm vụ bí mật của mình. Liệu lòng trung thành với cấp trên của bạn có mạnh mẽ hơn ý chí cứu những người sống sót? Sự lựa chọn là của bạn…</p>",
+  "category": {
+    "$oid": "655cfe6a54191fc073e222ce"
+  },
+  "platform": "PC,Console",
+  "price": 164500,
+  "pictures": [
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700593575/ed24klnb05pk1caockce.jpg",
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700593595/vhg8wq6mtnjv3sdsic1n.jpg",
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700593595/lnqvblq3p3eyzsox1ns9.jpg",
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700593595/u5t5e80kftqjddw2dobg.jpg"
+  ],
+  "codes": [
+    "iAB0bFnX",
+    "tpywWeqO",
+    "avbkPToE"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "655d00a354191fc073e22302"
+  },
+  "name": "Subnautica",
+  "description": "<p>Subnautica là một trò chơi phiêu lưu dưới nước lấy bối cảnh trên một hành tinh ngoài đại dương. Một thế giới rộng mở, đầy ngạc nhiên và nguy hiểm đang chờ bạn!</p><p>Bạn đã hạ cánh xuống một thế giới đại dương xa lạ và cách duy nhất để đi là đi xuống. Các đại dương của Subnautica trải dài từ các rạn san hô nông ngập nắng cho đến các rãnh biển sâu nguy hiểm, cánh đồng dung nham và các dòng sông dưới nước phát quang sinh học. Quản lý nguồn cung cấp oxy khi bạn khám phá rừng tảo bẹ, cao nguyên, rạn san hô và hệ thống hang động quanh co. Nước tràn ngập sự sống: Một phần hữu ích, phần lớn có hại.</p><p>Sau khi hạ cánh xuống Life Pod của bạn, đồng hồ đang tích tắc để tìm nước, thức ăn và phát triển thiết bị bạn cần khám phá. Thu thập tài nguyên từ đại dương xung quanh bạn. Chế tạo thiết bị lặn, đèn chiếu sáng, mô-đun môi trường sống và tàu lặn. Hãy khám phá hình thức sâu hơn và xa hơn để tìm các tài nguyên hiếm hơn, cho phép bạn chế tạo các vật phẩm cao cấp hơn.</p><p>Xây dựng căn cứ dưới đáy biển. Chọn bố cục và các thành phần, đồng thời quản lý tính toàn vẹn của thân tàu khi độ sâu và áp suất tăng lên. Sử dụng căn cứ của bạn để lưu trữ tài nguyên, đỗ xe và bổ sung nguồn cung cấp oxy khi bạn khám phá đại dương rộng lớn.</p><p><br></p><p>Điều gì đã xảy ra với hành tinh này? Có rất nhiều dấu hiệu cho thấy có điều gì đó không ổn. Điều gì đã khiến bạn gặp sự cố? Điều gì đang lây nhiễm cho sinh vật biển? Ai đã xây dựng nên những công trình bí ẩn nằm rải rác khắp đại dương? Bạn có thể tìm ra cách để khiến nó sống sót khỏi hành tinh này không?</p><p>Đại dương tràn đầy sự sống: Hãy sử dụng hệ sinh thái để giúp bạn. Hãy dụ dỗ và đánh lạc hướng sinh vật đang đe dọa bằng một con cá tươi, hoặc đơn giản là bơi nhanh nhất có thể để tránh hàm răng nghiến chặt của những kẻ săn mồi đang di chuyển.</p><p>Chế tạo Bộ đồ Nano chống nước kích hoạt lại áp suất hoặc Bộ đồ PRAWN và khám phá độ sâu và nhiệt độ cực cao. Sửa đổi bộ đồ bằng máy khoan khai thác, bệ phóng ngư lôi, pháo đẩy, móc vật lộn và hơn thế nữa.</p>",
+  "category": {
+    "$oid": "655cfebf54191fc073e222d1"
+  },
+  "platform": "PC,Console",
+  "price": 219000,
+  "pictures": [
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700593736/huintu9bric7gjbbubvg.jpg",
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700593753/ngwj2dmt5vqhpqiq8hi1.jpg",
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700593752/xcmgxytft8mz8r6jndy7.jpg",
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700593752/jhbjbwslgzuvxqzgq7dd.jpg"
+  ],
+  "codes": [
+    "XpISv3il",
+    "lMwnE8bP",
+    "dbIzm2Fz"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "655d00ef54191fc073e22308"
+  },
+  "name": "Grounded",
+  "description": "<p>Thế giới là một nơi rộng lớn, xinh đẹp và nguy hiểm - đặc biệt là khi bạn bị thu nhỏ lại chỉ bằng kích thước của một con kiến. Cùng nhau khám phá, xây dựng và sinh tồn trong cuộc phiêu lưu sinh tồn góc nhìn thứ nhất, nhiều người chơi này. Bạn có thể phát triển mạnh mẽ cùng với đám côn trùng khổng lồ, chiến đấu để sống sót trước những nguy hiểm ở sân sau không?</p>",
+  "category": {
+    "$oid": "655cfebf54191fc073e222d1"
+  },
+  "platform": "PC,Console",
+  "price": 415500,
+  "pictures": [
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700593864/rgv0ouvfmodzga2zk1jn.jpg",
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700593866/ftgpygoqwdkvjhfmbzgi.jpg",
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700593868/svgo5zjaivjtujnzuwdx.jpg",
+    "https://res.cloudinary.com/dgj5oa5c0/image/upload/v1700593867/pyim360s4lje6pnvdxmo.jpg"
+  ],
+  "codes": [
+    "wN6NiAsy",
+    "GzNSe0Bi",
+    "OgrnTAwL"
+  ],
+  "__v": 0
+}]

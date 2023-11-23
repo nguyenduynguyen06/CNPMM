@@ -4,6 +4,10 @@ const { generalAcesstoken } = require('../middleware/JWT');
 const JWT = require('../middleware/JWT')
 const userRegister = async (req, res) => {
   try {
+      const existingUser = await User.findOne({ userName: req.body.userName });
+      if (existingUser) {
+        return res.status(200).json({ msg: 'Tên người dùng đã tồn tại' });
+      }
       const hashPass = await argon2.hash(req.body.passWord);
       const newUser = new User({
           userName: req.body.userName,
@@ -20,6 +24,7 @@ const userRegister = async (req, res) => {
       res.status(400).json({ msg: 'Thất bại' });
   }
 };
+
 
 const userLogin = async (req, res) => {
     const password = req.body.passWord;

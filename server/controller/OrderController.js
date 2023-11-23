@@ -61,7 +61,7 @@ const getUserOrders = async (req, res) => {
     const userOrders = await Order.find({ user: userId })
       .populate({
         path: 'items.product',
-        select: '-codes', // Loại bỏ trường codes từ sản phẩm
+        select: '-codes', 
       });
 
     res.status(200).json({ success: true, data: userOrders });
